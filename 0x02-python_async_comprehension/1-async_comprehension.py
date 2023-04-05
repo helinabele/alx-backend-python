@@ -1,17 +1,13 @@
 #!/usr/bin/env python3
-""" Description: import async_generator from the previous task and the
-                 write a coroutine called async_comprehensio that
-                 takes no arguments
-"""
-
-import asyncio
+"""10 random numbers using an async comprehensing over"""
 from typing import List
-import random
-
 async_generator = __import__('0-async_generator').async_generator
 
 
 async def async_comprehension() -> List[float]:
-    ''' Return lists '''
-    return [x async for x in async_generator()]
-
+    """
+    async_comprehension - function that takes no arguments
+    Return: 10 random numbers
+    """
+    rslt = [i async for i in async_generator()]
+    return rslt
